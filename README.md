@@ -1,61 +1,64 @@
-# Ghar Sabha Companion
+# Daily Ahnik Companion
 
-A daily helper that gives you everything you need for ghar sabha (home gathering) today.
+A daily companion for ahnik and ghar sabha that's genuinely useful to a delegate at home, not just at the gala.
 
 ## What you are building
 
-A page that, with a click of a button, gives someone a random Swamishri prasang (story) and a suggested kirtan to sing — everything they need to run a meaningful ghar sabha without having to plan it themselves.
+An app someone can open every day to help with their ahnik (daily religious routine) and ghar sabha (home gathering). It combines a simple checklist for daily ahnik items with a button that surfaces a random Swamishri prasang (story) — something a delegate would actually want to open at home, not just during the coding sessions.
 
-## Your MVP (smallest working version)
+## Your MVP (smallest version that actually works)
 
 Get this working first, before anything else:
 
+- A checklist of daily ahnik items — such as aarti, thaal, and cheshta — that a user can check off.
 - A button that, when clicked, shows a random Swamishri prasang.
-- Along with the prasang, show a suggested kirtan to sing.
 
-That's it. If clicking the button gives someone a prasang and a kirtan, your MVP is done.
+That's it. If someone can check off their ahnik items and get a prasang, your MVP is done.
 
 ## Stretch goals
 
 Once your MVP works, try adding:
 
-- A niyam checklist people can tick off for puja, cheshta, and ghar sabha.
-- A "thought of the day" that shows alongside the prasang.
+- Lyrics for each ahnik item (like the aarti lyrics) that show up when the user taps on that item.
+- A dedicated ghar sabha companion section with a suggested kirtan for the day.
+- A "thought of the day."
 
 ## Challenge goals
 
-For teams who want to go further (pick one or both):
+For teams who want to go further, pick one:
 
-- A streak counter that remembers how many days in a row someone has used the app, and keeps that count even after they close the browser.
-- Date-based selection, so instead of a random prasang, everyone using the app on the same day sees the same one.
+- A streak counter that persists between visits, so it remembers how many days in a row someone has used the app even after they close the browser.
+- **OR** date-based selection, so instead of a random prasang, everyone using the app on the same day sees the same one.
 
-## Important: verify every prasang yourself
+## A note on content
 
-Any prasang or scriptural reference you use **must** come from a source you trust — the printed book, Anirdesh, or checking with a sadhu. **Do not** take prasangs from an AI tool. AI tools will confidently produce stories and references that sound real but are actually made up.
+This project has more content to gather than the other three — checklist items, prasangs, kirtans, lyrics, and a thought of the day all need to come from somewhere. The **Content** role should start gathering material early, rather than waiting for the Code role to need it.
+
+Any prasang, lyric, or scriptural reference you use **must** come from a source you trust — the printed book, Anirdesh, or checking with a sadhu. **Do not** take any of this content from an AI tool. AI tools will confidently produce stories, lyrics, and references that sound real but are actually made up.
 
 ## Team roles
 
-- **Content** — Collects and writes out the prasangs, kirtans, and niyam list, and verifies every prasang against a real source (see note above).
-- **Design** — Decides how the button, prasang, and kirtan are laid out, and how the page feels to use every day.
-- **Code** — Builds the button logic, picks the random (or date-based) prasang, and builds the checklist and streak counter for the stretch/challenge goals.
-- **Media** — Finds or creates any images or icons that go with the prasangs or niyam checklist.
+- **Content** — Gathers and writes out the ahnik checklist items, prasangs, kirtans, lyrics, and thought of the day, and verifies every prasang and reference against a real source (see note above). Start early!
+- **Design** — Decides how the checklist, prasang button, and ghar sabha section are laid out, and how the app feels to use every day.
+- **Code** — Builds the checklist logic, the random (or date-based) prasang picker, and the streak counter for the challenge goal.
+- **Media** — Finds or creates any images or icons that go with the checklist items, prasangs, or kirtans.
 
 ## Getting started
 
-1. Clone this repo to your computer:
+1. Pull the latest changes so you're starting from the newest version of the project:
    ```
-   git clone <this repo's URL>
+   git pull
    ```
-2. Open the `index.html` file in your web browser (just double-click it, or drag it into a browser window) to see the starter page.
+2. Open the `index.html` file in your web browser (double-click it, or drag it into a browser window) to see the current page.
 3. Make your changes to `index.html`, `style.css`, and `script.js`.
-4. Save your work with git, using these four commands as you go:
+4. Save your work with git as you go, using these four commands:
    ```
-   git clone <this repo's URL>
    git add .
    git commit -m "describe what you changed here"
    git push
+   git pull
    ```
-   (You only need to `clone` once — after that it's `add`, `commit`, and `push` each time you save progress.)
+   Run all four every time you save progress — `pull` again at the end so you're never behind if a teammate pushed while you were working.
 
 ## Working as a Team: Branches
 
