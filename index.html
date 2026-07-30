@@ -3,40 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Ahnik Companion</title>
+  <title>Ahnik Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="app-container">
-  <header>
-    <h1>Ahnik Companion</h1>
-    <div id="streak-counter">🔥 Streak: <span id="streak-count">0</span> days</div>
+
+  <header class="dawn-header">
+    <div class="dawn-header__inner">
+      <p class="eyebrow">Nitya Ahnik</p>
+      <img src="02 NSC Primary Logo Light.png" alt="Dradh Priti Logo" class="header-logo">
+      <div class="streak-pill" aria-label="Current streak">
+        <span id="flame-row" class="flame-row"></span>
+        <span class="streak-copy"><span id="streak-count">0</span> day streak</span>
+      </div>
+    </div>
+    <svg class="skyline" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 L0,38 Q15,38 15,20 Q15,38 30,38 L60,38 Q75,38 75,14 Q75,38 90,38 L140,38 Q155,38 155,26 Q155,38 170,38 L230,38 Q248,38 248,8 Q248,38 266,38 L340,38 Q355,38 355,26 Q355,38 370,38 L420,38 Q435,38 435,14 Q435,38 450,38 L480,38 Q495,38 495,20 Q495,38 510,38 L600,38 L600,60 Z" fill="var(--color-bg)"/>
+    </svg>
   </header>
 
-  <section id="thought-section">
-    <h2>Thought of the Day</h2>
-    <p id="thought-text">"Placeholder: The Content team should place a verified quote here."</p>
-  </section>
+  <main>
 
-  <section id="ahnik-section">
-    <h2>Daily Checklist</h2>
-    <ul id="checklist">
-    </ul>
-  </section>
+    <section id="thought-section" class="card card--quote">
+      <p class="thought-mark" aria-hidden="true">&#8220;</p>
+      <p id="thought-text">Placeholder: the content team should place a verified quote here.</p>
+    </section>
 
-  <section id="prasang-section">
-    <h2>Swamishri Prasang</h2>
-    <button id="prasang-btn">Read a Random Prasang</button>
-    <div id="prasang-display" class="hidden">
-      <h3 id="prasang-title"></h3>
-      <p id="prasang-text"></p>
-    </div>
-  </section>
+    <section id="ahnik-section" class="card">
+      <div class="card__header">
+        <h2>Daily checklist</h2>
+        <div class="progress" role="group" aria-label="Today's progress">
+          <span id="progress-text" class="progress__text">0 of 0 complete</span>
+          <span class="progress__track"><span id="progress-fill" class="progress__fill"></span></span>
+        </div>
+      </div>
+      <ul id="checklist"></ul>
+    </section>
 
-  <section id="ghar-sabha-section">
-    <h2>Ghar Sabha</h2>
-    <p><strong>Suggested Kirtan:</strong> <span id="kirtan-text">Placeholder Kirtan Title (Content Team)</span></p>
-  </section>
+    <section id="prasang-section" class="card">
+      <h2>Swamishri prasang</h2>
+      <p class="section-sub">A short story from the life of Pramukh Swami Maharaj.</p>
+      <button id="prasang-btn" type="button">Read a random prasang</button>
+      <div id="prasang-display" class="prasang-display hidden">
+        <h3 id="prasang-title"></h3>
+        <p id="prasang-text"></p>
+      </div>
+    </section>
+
+    <section id="ghar-sabha-section" class="card">
+      <h2>Ghar sabha</h2>
+      <p class="section-sub">Suggested kirtan for tonight's gathering</p>
+      <p class="kirtan-line" id="kirtan-text">Placeholder kirtan title (content team)</p>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>Jay Swaminarayan 🙏</p>
+  </footer>
+
 </div>
 
 <script src="script.js"></script>

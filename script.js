@@ -6,6 +6,7 @@ const ahnikItems = [
     {
         id: 'puja',
         name: 'Puja',
+        icon: 'flame',
         lyrics: `Daily Nitya Puja Sequence:
 
 1. Dhyan & Mansi Puja
@@ -20,6 +21,7 @@ const ahnikItems = [
     {
         id: 'aarti',
         name: 'Aarti',
+        icon: 'bell',
         lyrics: `Jay Swāminārāyaṇ, jay Akṣharpuruṣhottam,
 
 Akṣharpuruṣhottam jay, darshan sarvottam... Jay Swāminārāyaṇ... ṭek
@@ -51,6 +53,7 @@ Jay Swāminārāyaṇ....5.`
     {
         id: 'thaal',
         name: 'Thaal',
+        icon: 'bowl',
         lyrics: `Jamo thāḷ Jīvan jāu vārī, dhovu kar charaṇ karo tyārī...
 
 Beso melyā bājoṭhiyā ḍhāḷī,
@@ -94,6 +97,7 @@ Bhumānand kahe rājī thaīne... jamo thāḷ 6`
     {
         id: 'cheshta',
         name: 'Cheshta',
+        icon: 'lotus',
         lyrics: `Pratham Shrī Harine re, charaṇe shīsh namāvu;
 
 Nautam līlā re, Nārāyaṇnī gāvu. 1
@@ -142,7 +146,7 @@ Suṇtā sukhḍu re, āpe sukhsāgarnī. 1
 
 Netrakamaḷne re, rākhī ughāḍā kyāre;
 
-Dhyān dharīne re, bese jīvan bā’re. 2
+Dhyān dharīne re, bese jīvan bā're. 2
 
 Kyārek chamkī re, dhyān karantā jāge;
 
@@ -454,7 +458,7 @@ Bahu jaḷkrīḍā re, kartā jaḷmā nhāy;
 
 Jaḷmā tāḷī re, daīne kīrtan gāy. 6
 
-Nhāīne bā’re re, nīsrī vastra paherī;
+Nhāīne bā're re, nīsrī vastra paherī;
 
 Ghoḍe besī re, gher āve Ranglaherī. 7
 
@@ -502,7 +506,7 @@ Koī ajāṇe re, lagār aḍī jāye. 7
 
 Tyāre faḍkī re, jāge sundar Shyām;
 
-‘Koṇ chhe?’ pūchhe re, sevakne Sukhdhām. 8
+'Koṇ chhe?' pūchhe re, sevakne Sukhdhām. 8
 
 Evī līlā re, Harinī anant apār;
 
@@ -550,7 +554,7 @@ Jamṇā pagnā angūṭhānā nakhmāhī chihna vhālā;
 
 Te to nīrkhe je koī bhakta, prītie pravīṇ vhālā. 9
 
-E ja angūṭhāne bā’re til ek nautam dhāru vhālā;
+E ja angūṭhāne bā're til ek nautam dhāru vhālā;
 
 Premānand kahe nīrkhu prīte, prāṇ laī vāru vhālā. 10
 
@@ -620,19 +624,19 @@ Maḷyā mune Niṣhkuḷānandnā Swāmī. 8
 
 Poḍhe Prabhu sakal munike Shyām;
 
- Swāminārāyaṇ divya mūrti, santanke vishrām...
+ Swāminārāyaṇ divya mūrti, santanke vishrām...
 
 Akshar par ānandghan Prabhu, kiyo hai bhūpar ṭhām;
 
- Jehī milat jan tarat māyā, lahat Akṣhardhām... poḍhe 1
+ Jehī milat jan tarat māyā, lahat Akṣhardhām... poḍhe 1
 
 Shārad shesh mahesh mahāmuni, japat jehī guṇnām;
 
- Jās padraj shīsh dharī dharī, hot jan niṣhkām... poḍhe 2
+ Jās padraj shīsh dharī dharī, hot jan niṣhkām... poḍhe 2
 
 Premke paryank par Prabhu karat sukh arām;
 
- Muktānand nij charaṇ ḍhig guṇ, gāvat āṭhu jām... poḍhe 3
+ Muktānand nij charaṇ ḍhig guṇ, gāvat āṭhu jām... poḍhe 3
 
 (1-184)
 
@@ -642,25 +646,25 @@ Re tam vinā sukh sampat kahāve,
 
 Te to sarve mahādukh upjāve;
 
- Ante emā kām koī nāve... re Shyā 1
+ Ante emā kām koī nāve... re Shyā 1
 
 Re mūrakh lok mare bhaṭkī,
 
 Jūṭhā sange hāre shir paṭkī;
 
- Tethī mārī manvrutti aṭkī... re Shyā 2
+ Tethī mārī manvrutti aṭkī... re Shyā 2
 
 Re akhanḍ alaukik sukh sāru,
 
 Re joī joī man mohyu māru;
 
- Dharā dhan tam upar vāru... re Shyā 3
+ Dharā dhan tam upar vāru... re Shyā 3
 
 Re Brahmāthī kīṭ lagī joyu,
 
 Jūṭhu sukh jāṇīne vagovyu;
 
- Muktānand man tam sang mohyu... re Shyā 4
+ Muktānand man tam sang mohyu... re Shyā 4
 
 Dhyān Chintāmaṇi
 
@@ -704,7 +708,7 @@ Neṇe tāre Premsakhīnā Nāth, ke chitt mārā choriyā re lol... 4
 
 Pad - 3 (1-187)
 
-Vahālā mune vash kīdhī Ghanshyām, vā’lap tārā vā’lmā re lol;
+Vahālā mune vash kīdhī Ghanshyām, vā'lap tārā vā'lmā re lol;
 
 Man māru talkhe jovā kāj, ṭībakḍī chhe gālmā re lol... 1
 
@@ -849,26 +853,72 @@ const thoughtOfTheDay = [
     `"Satpurush is the gateway to liberation." - Vachanamrut Gadhada I-54`,
     `"Whatever happens, happens for the best. God is the all-doer." - Mahant Swami Maharaj`,
     `"A true devotee remains unfazed by both praise and insult." - Vachanamrut Gadhada II-62`
-];const suggestedKirtan = `Tari Murti Re Che...`;
+];
+
+const kirtans = [
+    {
+        title: "Tari Murti Re Che...",
+        url: "https://www.anirdesh.com/kirtan/index.php?part=1&no=262"
+    },
+    {
+        title: "Anubhavī ānandmā Brahmarasnā bhogī re",
+        url: "https://www.anirdesh.com/kirtan/study.php?by=type&type=Translation&part=1&no=428"
+    },
+    {
+        title: "Swāmī Bāpā amārī tame rakshā karo",
+        url: "https://www.anirdesh.com/kirtan/index.php?part=1&no=974"
+    },
+    {
+        title: "Saunā re prāṇ Pramukh Swāmī Mahārāj",
+        url: "https://www.anirdesh.com/kirtan/index.php?part=1&no=1027"
+    },
+    {
+        title: "Akṣhar Puruṣhottam dayāḷu Prabhu",
+        url: "https://www.anirdesh.com/kirtan/study.php?by=type&type=Translation&part=1&no=51"
+    }
+];
+
+// --- ICONS (small line-art SVGs used per checklist item) ---
+const icons = {
+    flame: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2c1 3-3 4-3 8a3 3 0 0 0 6 0c1.5 1 2 3 2 4.5A5 5 0 0 1 12 22a5 5 0 0 1-5-6.5C7.5 12 9 9 12 2Z" stroke-linejoin="round"/></svg>',
+    bell: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a5 5 0 0 0-5 5v3.5c0 .8-.3 1.6-.9 2.2L4.5 15.5h15L17.9 13.7c-.6-.6-.9-1.4-.9-2.2V8a5 5 0 0 0-5-5Z" stroke-linejoin="round"/><path d="M9.5 18.5a2.5 2.5 0 0 0 5 0" stroke-linecap="round"/></svg>',
+    bowl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 11h17" stroke-linecap="round"/><path d="M4 11a8 8 0 0 0 16 0" stroke-linecap="round"/><path d="M9 11V8.5M12 11V7M15 11V8.5" stroke-linecap="round"/><path d="M7 16.5c1.5 1.5 3.2 2.2 5 2.2s3.5-.7 5-2.2" stroke-linecap="round"/></svg>',
+    lotus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20c-4-1-6.5-4-6.5-7 3 0 5.2 1.6 6.5 4 1.3-2.4 3.5-4 6.5-4 0 3-2.5 6-6.5 7Z" stroke-linejoin="round"/><path d="M12 13V6" stroke-linecap="round"/><path d="M9 8.5c0-2 1.3-3.5 3-4.5 1.7 1 3 2.5 3 4.5" stroke-linejoin="round"/></svg>'
+};
 
 // --- DOM ELEMENTS ---
 const checklistContainer = document.getElementById('checklist');
+const progressText = document.getElementById('progress-text');
+const progressFill = document.getElementById('progress-fill');
 const prasangBtn = document.getElementById('prasang-btn');
 const prasangDisplay = document.getElementById('prasang-display');
 const prasangTitle = document.getElementById('prasang-title');
 const prasangText = document.getElementById('prasang-text');
 const streakCountEl = document.getElementById('streak-count');
+const flameRowEl = document.getElementById('flame-row');
 const thoughtTextEl = document.getElementById('thought-text');
 const kirtanTextEl = document.getElementById('kirtan-text');
 
 // --- CHECKLIST & LYRICS LOGIC ---
 function renderChecklist() {
-    ahnikItems.forEach(item => {
+    ahnikItems.forEach((item, index) => {
         const li = document.createElement('li');
+        li.className = 'ahnik-item';
 
-        // 1. Create Checkbox and Label
+        const row = document.createElement('div');
+        row.className = 'ahnik-row';
+
+        const order = document.createElement('span');
+        order.className = 'ahnik-order';
+        order.textContent = String(index + 1).padStart(2, '0');
+
+        const iconWrap = document.createElement('span');
+        iconWrap.className = 'ahnik-icon';
+        iconWrap.innerHTML = icons[item.icon] || icons.flame;
+
         const label = document.createElement('label');
         label.className = 'checkbox-container';
+        label.setAttribute('for', item.id);
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
@@ -886,34 +936,60 @@ function renderChecklist() {
             } else {
                 localStorage.removeItem(`ahnik_${item.id}_date`);
             }
+            li.classList.toggle('is-done', e.target.checked);
+            updateProgress();
         });
 
         const span = document.createElement('span');
+        span.className = 'ahnik-name';
         span.textContent = item.name;
 
-        label.appendChild(checkbox);
-        label.appendChild(span);
-        li.appendChild(label);
+        const checkmark = document.createElement('span');
+        checkmark.className = 'checkmark';
 
-        // 2. Create Lyrics Toggle Button
+        label.appendChild(checkbox);
+        label.appendChild(checkmark);
+        label.appendChild(span);
+
+        row.appendChild(order);
+        row.appendChild(iconWrap);
+        row.appendChild(label);
+
+        // Lyrics toggle button
         const lyricsBtn = document.createElement('button');
         lyricsBtn.className = 'lyrics-btn';
-        lyricsBtn.textContent = 'Show Lyrics';
+        lyricsBtn.type = 'button';
+        lyricsBtn.setAttribute('aria-expanded', 'false');
+        lyricsBtn.textContent = 'Show lyrics';
 
-        // 3. Create Lyrics Text Container
         const lyricsDiv = document.createElement('div');
         lyricsDiv.className = 'lyrics hidden';
         lyricsDiv.innerText = item.lyrics;
 
         lyricsBtn.addEventListener('click', () => {
+            const willShow = lyricsDiv.classList.contains('hidden');
             lyricsDiv.classList.toggle('hidden');
-            lyricsBtn.textContent = lyricsDiv.classList.contains('hidden') ? 'Hide Lyrics' : 'Show Lyrics';
+            lyricsBtn.textContent = willShow ? 'Hide lyrics' : 'Show lyrics';
+            lyricsBtn.setAttribute('aria-expanded', String(willShow));
         });
 
-        li.appendChild(lyricsBtn);
+        row.appendChild(lyricsBtn);
+
+        li.appendChild(row);
         li.appendChild(lyricsDiv);
+        li.classList.toggle('is-done', checkbox.checked);
         checklistContainer.appendChild(li);
     });
+
+    updateProgress();
+}
+
+function updateProgress() {
+    const boxes = checklistContainer.querySelectorAll('input[type="checkbox"]');
+    const total = boxes.length;
+    const done = Array.from(boxes).filter(b => b.checked).length;
+    if (progressText) progressText.textContent = `${done} of ${total} complete`;
+    if (progressFill) progressFill.style.width = total ? `${(done / total) * 100}%` : '0%';
 }
 
 // --- RANDOM PRASANG LOGIC ---
@@ -924,6 +1000,7 @@ prasangBtn.addEventListener('click', () => {
     prasangTitle.textContent = selected.title;
     prasangText.textContent = selected.text;
     prasangDisplay.classList.remove('hidden');
+    prasangBtn.textContent = 'Read another prasang';
 });
 
 // --- CHALLENGE GOAL: STREAK COUNTER ---
@@ -950,65 +1027,43 @@ function updateStreak() {
 
     localStorage.setItem('lastVisit', today);
     localStorage.setItem('ahnikStreak', streak);
-    streakCountEl.textContent = streak;
-}
+    if (streakCountEl) streakCountEl.textContent = streak;
 
-// --- APP INITIALIZATION ---
-function init() {
-    renderChecklist();
-    updateStreak();
-
-    // Inject the static content
-    if(thoughtTextEl) thoughtTextEl.textContent = thoughtOfTheDay;
-    if(kirtanTextEl) kirtanTextEl.textContent = suggestedKirtan;
-}
-
-// Add this array right below your prasangs array
-const kirtans = [
-    {
-        title: "Tari Murti Re Che...",
-        url: "https://www.anirdesh.com/kirtan/index.php?part=1&no=262"
-    },
-    {
-        title: "Anubhavī ānandmā Brahmarasnā bhogī re",
-        url: "https://www.anirdesh.com/kirtan/study.php?by=type&type=Translation&part=1&no=428"
-    },
-    {
-        title: "Swāmī Bāpā amārī tame rakshā karo",
-        url: "https://www.anirdesh.com/kirtan/index.php?part=1&no=974"
-    },
-    {
-        title: "Saunā re prāṇ Pramukh Swāmī Mahārāj",
-        url: "https://www.anirdesh.com/kirtan/index.php?part=1&no=1027"
-    },
-    {
-        title: "Akṣhar Puruṣhottam dayāḷu Prabhu",
-        url: "https://www.anirdesh.com/kirtan/study.php?by=type&type=Translation&part=1&no=51"
+    if (flameRowEl) {
+        flameRowEl.innerHTML = '';
+        const shown = Math.min(streak, 5);
+        for (let i = 0; i < shown; i++) {
+            const f = document.createElement('span');
+            f.className = 'mini-flame';
+            f.innerHTML = icons.flame;
+            flameRowEl.appendChild(f);
+        }
     }
-];
-
-// ... (keep the rest of your DOM elements and functions the same) ...
+}
 
 // --- APP INITIALIZATION ---
 function init() {
     renderChecklist();
     updateStreak();
 
-    // Inject the Thought of the Day
-// Inject a Random Thought of the Day
-    if(thoughtTextEl) {
+    // Inject a random Thought of the Day
+    if (thoughtTextEl) {
         const randomThoughtIndex = Math.floor(Math.random() * thoughtOfTheDay.length);
         thoughtTextEl.textContent = thoughtOfTheDay[randomThoughtIndex];
     }
-    // Inject a Random Kirtan for Ghar Sabha
-    // Inject a Random Kirtan for Ghar Sabha as a Clickable Link
-    if(kirtanTextEl) {
+
+    // Inject a random Kirtan for Ghar Sabha as a clickable link
+    if (kirtanTextEl) {
         const randomKirtanIndex = Math.floor(Math.random() * kirtans.length);
         const selectedKirtan = kirtans[randomKirtanIndex];
-
-        // Use innerHTML to create an anchor tag (<a>)
-        // target="_blank" opens the link in a new tab
-        kirtanTextEl.innerHTML = `<a href="${selectedKirtan.url}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold;">${selectedKirtan.title}</a>`;
+        kirtanTextEl.innerHTML = '';
+        const a = document.createElement('a');
+        a.href = selectedKirtan.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'kirtan-link';
+        a.textContent = selectedKirtan.title;
+        kirtanTextEl.appendChild(a);
     }
 }
 

@@ -1,154 +1,440 @@
-/* Base Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ==========================================================================
+   Ahnik Companion — design tokens
+   A morning devotional app: the palette moves from brahma-muhurat indigo
+   through dawn saffron, and each card carries a small arch/finial motif
+   borrowed from a mandir jharokha.
+   ========================================================================== */
+
+:root {
+  --color-bg: #FAF5EA;
+  --color-surface: #FFFFFF;
+  --color-ink: #2A2140;
+  --color-ink-soft: #675E7D;
+  --color-saffron: #E2932E;
+  --color-saffron-deep: #B9720F;
+  --color-maroon: #8C2F26;
+  --color-gold: #B8862E;
+  --color-line: #E8DFCE;
+
+  --gradient-dawn: linear-gradient(180deg, #211935 0%, #4B2E52 40%, #C2703C 75%, #ECA847 100%);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Karla', 'Segoe UI', sans-serif;
+
+  --radius-card: 20px;
+  --shadow-card: 0 10px 30px -14px rgba(42, 33, 64, 0.25);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f7f6;
-  color: #333;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
   line-height: 1.6;
-  padding: 20px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .app-container {
   max-width: 600px;
   margin: 0 auto;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Header ---------- */
+
+.dawn-header {
+  position: relative;
+  background: var(--gradient-dawn);
+  padding: 28px 24px 0;
+  overflow: hidden;
+}
+
+/* ADD THIS NEW BLOCK FOR YOUR LOGO */
+.header-logo {
+  max-width: 280px; /* Adjust this to make the logo larger or smaller */
+  height: auto;
+  display: block;
+  margin: 0 auto 16px auto; /* Centers the logo and adds space below it */
+}
+
+.dawn-header__inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 34px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #F3D9A8;
+  margin-bottom: 6px;
+}
+
+.dawn-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FFF8EC;
+  margin-bottom: 16px;
+}
+
+.streak-pill {
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 15px;
+  gap: 10px;
+  background: rgba(255, 248, 236, 0.14);
+  border: 1px solid rgba(255, 248, 236, 0.35);
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #FFF3DE;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-h1 {
-  font-size: 1.5rem;
-  color: #2c3e50;
+.flame-row {
+  display: inline-flex;
+  gap: 2px;
 }
 
-h2 {
-  font-size: 1.2rem;
-  color: #34495e;
-  margin-bottom: 10px;
-  border-left: 4px solid #e67e22;
-  padding-left: 10px;
+.mini-flame {
+  width: 14px;
+  height: 14px;
+  color: #F5B14B;
 }
 
-#streak-counter {
-  background: #fff3e0;
-  color: #d35400;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-weight: bold;
+.mini-flame svg { width: 100%; height: 100%; }
+
+.skyline {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+/* ---------- Layout ---------- */
+
+main {
+  padding: 20px 20px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------- Card shell with arch finial ---------- */
+
+.card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card) var(--radius-card) 12px 12px;
+  box-shadow: var(--shadow-card);
+  padding: 22px 20px 20px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: var(--color-gold);
+  border: 3px solid var(--color-bg);
+  border-radius: 50%;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.card__header h2 { margin-bottom: 0; }
+
+.section-sub {
+  color: var(--color-ink-soft);
   font-size: 0.9rem;
+  margin-bottom: 14px;
 }
 
-section {
-  margin-bottom: 25px;
-  padding: 15px;
-  background: #fafafa;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+/* ---------- Thought of the day ---------- */
+
+.card--quote {
+  background: #2A2140;
+  border-color: #2A2140;
+  color: #F3ECFF;
+  text-align: center;
+  padding-top: 30px;
 }
 
-ul {
-  list-style-type: none;
+.card--quote::before { background: var(--color-saffron); }
+
+.thought-mark {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--color-saffron);
+  margin-bottom: 4px;
 }
 
-li {
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+#thought-text {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #F3ECFF;
+  max-width: 46ch;
+  margin: 0 auto;
 }
 
-li:last-child {
-  border-bottom: none;
+/* ---------- Progress ---------- */
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+.progress__text {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+
+.progress__track {
+  width: 64px;
+  height: 6px;
+  background: var(--color-line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress__fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--color-saffron);
+  transition: width 0.35s ease;
+}
+
+/* ---------- Checklist ---------- */
+
+#checklist { list-style: none; }
+
+.ahnik-item {
+  border-bottom: 1px solid var(--color-line);
+  padding: 12px 0;
+}
+
+.ahnik-item:last-child { border-bottom: none; padding-bottom: 0; }
+.ahnik-item:first-child { padding-top: 0; }
+
+.ahnik-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.ahnik-order {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.ahnik-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-saffron-deep);
+  flex-shrink: 0;
+}
+
+.ahnik-icon svg { width: 100%; height: 100%; }
+
+.is-done .ahnik-icon { color: var(--color-maroon); }
+.is-done .ahnik-name { color: var(--color-ink-soft); text-decoration: line-through; text-decoration-color: var(--color-line); }
+
+/* Custom checkbox */
 
 .checkbox-container {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.1rem;
+  gap: 10px;
   cursor: pointer;
-  font-weight: 500;
+  min-width: 0;
 }
 
 .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.checkmark {
   width: 20px;
   height: 20px;
-  accent-color: #e67e22;
+  flex-shrink: 0;
+  border: 2px solid var(--color-gold);
+  border-radius: 6px;
+  position: relative;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.checkbox-container input:checked + .checkmark {
+  background: var(--color-saffron);
+  border-color: var(--color-saffron);
+}
+
+.checkbox-container input:checked + .checkmark::after { opacity: 1; }
+
+.checkbox-container input:focus-visible + .checkmark {
+  outline: 2px solid var(--color-maroon);
+  outline-offset: 2px;
+}
+
+.ahnik-name {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .lyrics-btn {
-  margin-top: 8px;
-  margin-left: 32px;
-  background: #ecf0f1;
-  color: #2c3e50;
-  border: 1px solid #bdc3c7;
+  background: transparent;
+  color: var(--color-saffron-deep);
+  border: 1px solid var(--color-line);
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 999px;
   cursor: pointer;
-  font-size: 0.85rem;
-  transition: 0.2s;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-.lyrics-btn:hover {
-  background: #bdc3c7;
-}
+.lyrics-btn:hover { background: #FBEEDA; border-color: var(--color-saffron); }
+.lyrics-btn:focus-visible { outline: 2px solid var(--color-maroon); outline-offset: 2px; }
 
 .lyrics {
-  margin-top: 10px;
-  margin-left: 32px;
-  padding: 10px;
-  background: #fff;
-  border-left: 3px solid #3498db;
-  border-radius: 4px;
-  font-style: italic;
-  font-size: 0.95rem;
-  color: #555;
+  margin-top: 12px;
+  margin-left: 30px;
+  padding: 14px 16px;
+  background: var(--color-bg);
+  border-left: 3px solid var(--color-saffron);
+  border-radius: 4px 10px 10px 4px;
+  font-size: 0.92rem;
+  color: var(--color-ink-soft);
+  white-space: pre-line;
 }
 
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
+
+/* ---------- Prasang ---------- */
 
 #prasang-btn {
-  background: #e67e22;
-  color: white;
+  background: var(--color-saffron);
+  color: #2A2140;
   border: none;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
+  padding: 13px;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-family: var(--font-body);
   cursor: pointer;
   width: 100%;
-  transition: 0.2s;
+  transition: background 0.15s ease, transform 0.1s ease;
 }
 
-#prasang-btn:hover {
-  background: #d35400;
-}
+#prasang-btn:hover { background: var(--color-saffron-deep); color: #fff; }
+#prasang-btn:active { transform: translateY(1px); }
+#prasang-btn:focus-visible { outline: 2px solid var(--color-maroon); outline-offset: 2px; }
 
-#prasang-display {
-  margin-top: 15px;
-  padding: 15px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.prasang-display {
+  margin-top: 16px;
+  padding: 16px 18px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: 4px 14px 14px 14px;
 }
 
 #prasang-title {
+  font-size: 1.05rem;
   margin-bottom: 8px;
-  font-size: 1.1rem;
+  color: var(--color-maroon);
+}
+
+#prasang-text { color: var(--color-ink); font-size: 0.95rem; }
+
+/* ---------- Ghar sabha ---------- */
+
+.kirtan-line { font-size: 1rem; }
+
+.kirtan-link {
+  color: var(--color-saffron-deep);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-saffron);
+}
+
+.kirtan-link:hover { color: var(--color-maroon); border-color: var(--color-maroon); }
+
+/* ---------- Footer ---------- */
+
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--color-ink-soft);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 380px) {
+  .ahnik-row {
+    grid-template-columns: auto auto 1fr;
+  }
+  .lyrics-btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-left: 30px;
+  }
 }
