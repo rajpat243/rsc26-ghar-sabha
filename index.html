@@ -3,12 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghar Sabha Companion</title>
+  <title>Daily Ahnik Companion</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Ghar Sabha Companion</h1>
-  <p>This is a starter page. Your team will replace this with the real thing.</p>
-  <script src="script.js"></script>
+<div class="app-container">
+  <header>
+    <h1>Ahnik Companion</h1>
+    <div id="streak-counter">🔥 Streak: <span id="streak-count">0</span> days</div>
+  </header>
+
+  <section id="thought-section">
+    <h2>Thought of the Day</h2>
+    <p id="thought-text">"Placeholder: The Content team should place a verified quote here."</p>
+  </section>
+
+  <section id="ahnik-section">
+    <h2>Daily Checklist</h2>
+    <ul id="checklist">
+    </ul>
+  </section>
+
+  <section id="prasang-section">
+    <h2>Swamishri Prasang</h2>
+    <button id="prasang-btn">Read a Random Prasang</button>
+    <div id="prasang-display" class="hidden">
+      <h3 id="prasang-title"></h3>
+      <p id="prasang-text"></p>
+    </div>
+  </section>
+
+  <section id="ghar-sabha-section">
+    <h2>Ghar Sabha</h2>
+    <p><strong>Suggested Kirtan:</strong> <span id="kirtan-text">Placeholder Kirtan Title (Content Team)</span></p>
+  </section>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
