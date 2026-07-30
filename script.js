@@ -4,6 +4,20 @@ console.log("script.js is connected!");
 
 const ahnikItems = [
     {
+        id: 'puja',
+        name: 'Puja',
+        lyrics: `Daily Nitya Puja Sequence:
+
+1. Dhyan & Mansi Puja
+2. Tilak-Chandlo
+3. Ahwan Mantra:
+4. Swaminarayan Mantra Jap
+5. Tapni Mala & Pradakshina
+6. Dandvat Pranam
+7. Reading Vachanamrut / Swamini Vato
+8. Punah Agaman Mantra`
+    },
+    {
         id: 'aarti',
         name: 'Aarti',
         lyrics: `Jay Swāminārāyaṇ, jay Akṣharpuruṣhottam,
