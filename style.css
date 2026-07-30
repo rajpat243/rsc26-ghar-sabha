@@ -1,7 +1,154 @@
-/* This is where your team writes your styles */
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
   padding: 20px;
-  line-height: 1.5;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  border-left: 4px solid #e67e22;
+  padding-left: 10px;
+}
+
+#streak-counter {
+  background: #fff3e0;
+  color: #d35400;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+section {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkbox-container input {
+  width: 20px;
+  height: 20px;
+  accent-color: #e67e22;
+}
+
+.lyrics-btn {
+  margin-top: 8px;
+  margin-left: 32px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #bdc3c7;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.lyrics-btn:hover {
+  background: #bdc3c7;
+}
+
+.lyrics {
+  margin-top: 10px;
+  margin-left: 32px;
+  padding: 10px;
+  background: #fff;
+  border-left: 3px solid #3498db;
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.hidden {
+  display: none;
+}
+
+#prasang-btn {
+  background: #e67e22;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s;
+}
+
+#prasang-btn:hover {
+  background: #d35400;
+}
+
+#prasang-display {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#prasang-title {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
 }
